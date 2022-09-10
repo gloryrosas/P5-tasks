@@ -5,58 +5,59 @@ let image3;
 let image4;
 let image5;
 
-//let color0, color1, color2, color3, color4, color5;
-
-let white, r, g, b;
+let white;
+let r = 1;
+let g = 1;
+let b = 1;
+let colors = ['#f6d18b', '#41b6d7', '#e28743'];;
 
 function preload()
 {
-    image0 = loadImage('images/full-moon/full moon -L1.png');
-    image1 = loadImage('images/full-moon/full moon - L2.png');
-    image2 = loadImage('images/full-moon/full moon - L3.png');
-    image3 = loadImage('images/full-moon/full moon - L4.png');
-    image4 = loadImage('images/full-moon/full moon - L5.png');
-    image5 = loadImage('images/full-moon/full moon - L6.png');
+    image0 = loadImage('images/l1.png');
+    image1 = loadImage('images/l2.png');
+    image2 = loadImage('images/l3.png');
+    image3 = loadImage('images/l4.png');
+    image4 = loadImage('images/l5.png');
+    image5 = loadImage('images/l6.png');
 
-    white = color('#fff');
-    color0 = color('#000');
-    color1 = color('#af282b');
-    color2 = color('#be543d');
-    color3 = color('#36505d');
-    color4 = color('#36505d');
-    color5 = color('#36505d');
+    randomColor = random(colors.length);
+    var finalColor = floor(randomColor);
+    randomColor = color(finalColor);
+
 }
 
 function setup() {
-  createCanvas(1315, 1857);
+    createCanvas(1315, 1857);
+    frameRate(3);
 }
 
 function draw() {
-
-  r = random(0, 255);
-  g = random(0, 255);
-  b = random(0, 255);
-
-  var mixColors = r + g + b;
+    
+ r = random(0, 255);
+ g = random(0, 255);
+ b = random(0, 255);
 
   background(220);
+
   
-
-  tint(r);
+  tint(r, g, b);
   image(image0, 0, 0,);
+  noTint();
 
-  tint(g);
+  tint(r, b);
   image(image1, 0, 0,);
+  noTint();
 
-
-  tint(b);
+  tint(r, g);
   image(image2, 0, 0,);
-
-  tint(r);
-  image(image3, 0, 0,);
-
-  image(image4, 0, 0,);
+  noTint();
+  
+  tint(g);
   image(image5, 0, 0,);
+  noTint();
+  
+  image(image3, 0, 0,);
+  image(image4, 0, 0,);
 
 
   
