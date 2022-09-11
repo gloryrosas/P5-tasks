@@ -16,6 +16,19 @@ let rangeSlider;
 let colors;
 let randomColor;
 
+
+addEventListener("load", function(e) {
+    const send = document.getElementById("sendButton");
+
+    console.log(send);
+
+    send.addEventListener('click', (e) => {
+        e.preventDefault();
+        DrawByAction();
+    });
+
+  })
+
 function preload()
 {
     image0 = loadImage('images/l1.png');
@@ -39,7 +52,7 @@ function setup() {
 
 
 
-function draw() {
+/*function draw() {
     r = random(0, 255);
     g = random(0, 255);
     b = random(0, 255);
@@ -51,6 +64,11 @@ function draw() {
 
     randomColor = random(colors);
     
+}*/
+
+function DrawByAction()
+{
+
   tint(color(p0.value));
   image(image0, 0, 0,);
   noTint();
@@ -74,7 +92,35 @@ function draw() {
   tint(color(p5.value));
   image(image4, 0, 0,);
   noTint();
+}
 
+function RandomDraw()
+{
+    r = random(0, 255);
+    g = random(0, 255);
+    b = random(0, 255);
 
+  tint(r, g, b);
+  image(image0, 0, 0,);
+  noTint();
+
+  tint(r, g);
+  image(image1, 0, 0,);
+  noTint();
+
+  tint(r);
+  image(image2, 0, 0,);
+  noTint();
   
+  tint(g, b);
+  image(image5, 0, 0,);
+  noTint();
+  
+  tint(b);
+  image(image3, 0, 0,);
+  noTint();
+  
+  tint(g);
+  image(image4, 0, 0,);
+  noTint();
 }
