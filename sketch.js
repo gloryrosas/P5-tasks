@@ -33,11 +33,8 @@ function setup() {
     p3 = document.getElementById("palette-3");
     p4 = document.getElementById("palette-4");
     p5 = document.getElementById("palette-5");
-    createCanvas(1315, 1857);
-
-    
-    rangeSlider = document.getElementById("slide-fR");
-    frameRate(rangeSlider.value);
+    var myCanvas = createCanvas(595, 877);
+    myCanvas.parent("mainC");
 }
 
 
@@ -49,36 +46,34 @@ function draw() {
     
     
     background(220);
-
-    p0.value = '#2596be';
-    p1.value = '#873e23';
     
     colors = [color(p0.value), color(p1.value), color(p2.value), color(p3.value), color(p4.value), color(p5.value)];
 
-    randomColor = random(colors[0], colors[1]);
-    //console.log(randomColor);
+    randomColor = random(colors);
     
-  tint(randomColor, randomColor, randomColor);
+  tint(color(p0.value));
   image(image0, 0, 0,);
   noTint();
 
-  tint(randomColor, randomColor, randomColor);
+  tint(color(p1.value));
   image(image1, 0, 0,);
   noTint();
 
-  tint(randomColor, randomColor, randomColor);
+  tint(color(p2.value));
   image(image2, 0, 0,);
   noTint();
   
-  tint(randomColor, randomColor, randomColor);
+  tint(color(p3.value));
   image(image5, 0, 0,);
   noTint();
   
-  tint(randomColor, randomColor, randomColor);
+  tint(color(p4.value));
   image(image3, 0, 0,);
   noTint();
-
+  
+  tint(color(p5.value));
   image(image4, 0, 0,);
+  noTint();
 
 
   
