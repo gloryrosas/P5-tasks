@@ -2,7 +2,27 @@ html, body {
     margin: 0;
     padding: 0;
   }
+
   canvas {
     display: block;
   }
+
+  .p5Canvas
+  {
+    float: right;
+    padding-right: 10%;
+}
+
+.p5Changes
+input{
+  margin-top: 10%;
+  margin-left: 5%;
+  width: 400px;
+  height: 50px;
+}
+
+.p5Palettes{
+  display: flex;
+  flex-direction: column;
+}
   
