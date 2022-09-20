@@ -128,6 +128,9 @@ function RandomDraw()
 
   tint(g, b);
   image(image5, 0, 0,);
+
+  fill(0,0,0);
+  ellipse(298, 439, 350, 350);
 }
 
 function DefaultDraw()
